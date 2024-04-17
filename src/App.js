@@ -1,25 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider } from "react-router-dom";  
+import routerConfig from "./utils/router-config"; // router config for navigation routing
 
-function App() {
+// ROOT APP OF PROJECT
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+      <RouterProvider router={routerConfig} />
+   );
+};
 export default App;
